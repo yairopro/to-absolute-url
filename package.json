@@ -1,0 +1,13 @@
+{
+  "name": "resolveUrl",
+  "version": "0.0.0",
+  "description": "A function to resolve relative paths to absolute urls.",
+  "main": "resolveUrl.js",
+  "repository": "https://github.com/yairopro/resolveUrl.git",
+  "author": "Yair <yairopro@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "stacktrace-js": "^2.0.0"
+  }
+}
