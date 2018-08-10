@@ -1,4 +1,4 @@
-import "../stacktrace-js/dist/stacktrace.min.js"
+var StackTrace = require("stacktrace-js/stacktrace.js");
 
 /**
  * @param {String?} path Relative path.
