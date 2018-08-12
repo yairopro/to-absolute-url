@@ -1,13 +1,27 @@
 {
   "name": "to-absolute-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A function to resolve relative paths from current script's url to absolute urls.",
   "main": "resolveUrl.js",
-  "repository": "https://github.com/yairopro/to-absolute-url.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yairopro/to-absolute-url.git"
+  },
   "author": "Yair <yairopro@gmail.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
     "stacktrace-js": "^2.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/yairopro/to-absolute-url/issues"
+  },
+  "homepage": "https://github.com/yairopro/to-absolute-url#readme",
+  "devDependencies": {},
+  "keywords": [
+    "resolve",
+    "url",
+    "relative",
+    "absolute"
+  ]
 }
