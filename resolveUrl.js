@@ -1,4 +1,4 @@
-var StackTrace = require("stacktrace-js/stacktrace.js");
+import StackTrace from "stacktrace-js/stacktrace.js"
 
 /**
  * @param {String?} path Relative path.
@@ -12,7 +12,7 @@ export default function resolveUrl(path, depth) {
 	// get stack
 	let stack = StackTrace.getSync();
 	// remove current function & stacktrace depth
-	stack = stack.slice(3);
+	stack = stack.slice(1);
 
 	// correct depth
 	if (depth < 0)
