@@ -5,7 +5,7 @@ import StackTrace from "stacktrace-js/stacktrace.js"
  * @param {Number} [depth=0] Depth in the stacktrace.
  * @returns {string} The absolute url of the current running code.
  */
-export default function resolveUrl(path, depth) {
+export default function (path, depth) {
 	// default depth
 	depth = depth || 0;
 

@@ -1,9 +1,9 @@
-# resolveUrl
-A function to resolve relative paths to absolute urls (using [stacktrace.js](https://www.stacktracejs.com/)).
+# toAbsoluteUrl
+A function to resolve relative paths to absolute urls (using [stacktrace.js](https://www.stacktracejs.com/) & native URL module).
 
 #### Instalation
 ````
-import resolveUrl from "/node_modules/resolveUrl/resolveUrl.js"
+import toAbsoluteUrl from "to-absolute-url"
 ````
 
 #### Usage
@@ -11,14 +11,14 @@ import resolveUrl from "/node_modules/resolveUrl/resolveUrl.js"
 ###### Get absolute url of current file
 ````
 // https://domaine-name.com/path/to/module.js
-resolveUrl() // returns "https://domaine-name.com/path/to/module.js"
+toAbsoluteUrl() // returns "https://domaine-name.com/path/to/module.js"
 ````
 
 ###### Get absolute url of a relative path
 ````
 // https://domaine-name.com/dir/dir1/module1.js
-resolveUrl("../dir2/module2.js") // returns "https://domaine-name.com/dir/dir2/module2.js"
-resolveUrl("../dir2/module2.js", 0) // idem
+toAbsoluteUrl("../dir2/module2.js") // returns "https://domaine-name.com/dir/dir2/module2.js"
+toAbsoluteUrl("../dir2/module2.js", /*depth*/ 0) // idem
 ````
 
 ###### Get absolute url of a relative path from the caller function
@@ -26,7 +26,7 @@ Useful when you create modules which receive relative path as parameter.
 ````
 // https://domaine-name.com/dir/dir1/whereAmI.js
 export default function whereAmI(){
-    let callerUrl = resolveUrl(null, 1 /*Depth in the stacktrace. Default value : 0.*/);
+    let callerUrl = toAbsoluteUrl(null, 1 /*Depth in the stacktrace. Default value : 0.*/);
     console.log("You a running at " + callerUrl);
 }
 
