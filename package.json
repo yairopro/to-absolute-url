@@ -1,6 +1,6 @@
 {
   "name": "to-absolute-url",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A function to resolve relative paths from current script's url to absolute urls.",
   "main": "resolveUrl.js",
   "repository": {
