@@ -12,7 +12,8 @@ export default function toAbsoluteUrl(path, depth) {
 	depth = depth || 0;
 
 	// get stack
-	let stack = StackTrace.getSync();
+	let stack = StackTrace.getSync()
+		.filter(entry => entry.fileName !== '[native code]'); // browsers (like safari) may inject native functions entries
 
 	if (!numberOfFramesToRemove) {
 		let found;
